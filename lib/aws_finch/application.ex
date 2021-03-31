@@ -10,6 +10,7 @@ defmodule AwsFinch.Application do
     children = [
       # Starts a worker by calling: AwsFinch.Worker.start_link(arg)
       # {AwsFinch.Worker, arg}
+      {Finch, name: AwsFinch.HttpClient}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
